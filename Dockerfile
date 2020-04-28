@@ -21,8 +21,10 @@ RUN apt-get update \
 RUN npm i npm@latest -g \ 
     && npm install serverless@${SERVERLESS_VERSION} serverless-plugin-split-stacks serverless-prune-plugin serverless-api-gateway-cloudwatch-settings \
     && git clone https://github.com/douglasjsellers/serverless-plugins.git \
+    && rm -rf serverless-plugins/.git \
     && npm install -i serverless-plugins/packages/serverless-offline-sqs \
     && git clone https://github.com/dmkr/serverless-offline-scheduler.git \
+    && rm -rf serverless-offline-scheduler/.git \
     && npm install -i ./serverless-offline-scheduler
 
 # install bundler
