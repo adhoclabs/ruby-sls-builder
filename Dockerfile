@@ -6,7 +6,7 @@ RUN mkdir -p /root/repo/assets
 WORKDIR /root/repo/assets
 
 # versioning and deb non-interactive fixes
-ENV SERVERLESS_VERSION=1.67.3 \
+ENV SERVERLESS_VERSION=1.45.1 \
     DEBIAN_FRONTEND="noninteractive" \
     DEBCONF_NONINTERACTIVE_SEEN="true"
 
