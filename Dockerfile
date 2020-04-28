@@ -19,7 +19,7 @@ RUN apt-get update \
     
 # install serverless and deps
 RUN npm i npm@latest -g \ 
-    && npm install serverless@${SERVERLESS_VERSION} serverless-plugin-split-stacks serverless-prune-plugin serverless-api-gateway-cloudwatch-settings \
+    && npm install serverless@${SERVERLESS_VERSION} serverless-plugin-split-stacks@1.9.3 serverless-prune-plugin serverless-api-gateway-cloudwatch-settings \
     && git clone https://github.com/douglasjsellers/serverless-plugins.git \
     && rm -rf serverless-plugins/.git \
     && npm install -i serverless-plugins/packages/serverless-offline-sqs \
